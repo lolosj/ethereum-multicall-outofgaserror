@@ -38,7 +38,7 @@ async function multicallFunction(contractAddress) {
         ]
     });
     
-    let multicallResults = await multicall.call(contractCallContext);
+    let multicallResults = await multicall.call(contractCallContext); // this doesnt throw an error
     console.log("Results :", multicallResults.results['pancake_farm_444']);
 }
 
@@ -62,7 +62,7 @@ async function multicallFunctionWithError(contractAddress) {
            ]
      });
      
-     let multicallResults = await multicall.call(contractCallContext);
+     let multicallResults = await multicall.call(contractCallContext); // this throws an error
      console.log("Results :", multicallResults.results['pancake_farm_444']);
  }
  
